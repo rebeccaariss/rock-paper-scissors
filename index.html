@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock | Paper | Scissors</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-    <h2>User Choice: <span id="user-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
-
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-
+    <div id="user-choices">
+        <input type="image" src="rock.png" name="rock" class="btTxt submit" id="rock" />
+        <input type="image" src="paper.png" name="paper" class="btTxt submit" id="paper" />
+        <input type="image" src="scissors.png" name="scissors" class="btTxt submit" id="scissors" />
+    </div>
+    <div id="selections">
+        <h2>Computer Choice: <span id="computer-choice"></span></h2>
+        <h2>User Choice: <span id="user-choice"></span></h2>
+        <h2>Result: <span id="result"></span></h2>
+    </div>
+    <footer>
+        <a href="https://icons8.com/" target="_blank">Icons by Icons8</a>
+    </footer>
     <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
