@@ -5,21 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock | Paper | Scissors</title>
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div id="selections-display">
+        <div id="user-panel" class="panel">
+            <h2>User Choice</h2>
+            <div class="choice-image">
+                <span id="user-choice"></span>
+            </div>
+        </div>
+        <div id="computer-panel" class="panel">
+            <h2>Computer Choice</h2>
+            <div class="choice-image">
+                <span id="computer-choice"></span>
+            </div>
+        </div>
+    </div>
     <div id="user-choices">
         <input type="image" src="rock.png" name="rock" class="btTxt submit" id="rock" />
         <input type="image" src="paper.png" name="paper" class="btTxt submit" id="paper" />
         <input type="image" src="scissors.png" name="scissors" class="btTxt submit" id="scissors" />
     </div>
-    <div id="final-selections">
-        <h2>Computer Choice: <span id="computer-choice"></span></h2>
-        <h2>User Choice: <span id="user-choice"></span></h2>
+    <div id="scoring">
         <h2>Result: <span id="result"></span></h2>
+        <h2>Scoreboard:</h2>
+        <h3>Total wins for user: <span id="user-wins"></span></h3>
+        <h3>Total wins for computer: <span id="computer-wins"></span></h3>
     </div>
     <footer>
-        <a href="https://icons8.com/" target="_blank">Icons by Icons8</a>
+        <a href="https://icons8.com/" target="_blank">Hand Icons by Icons8</a>
     </footer>
     <script src="app.js" charset="utf-8"></script>
 </body>

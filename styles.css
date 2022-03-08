@@ -6,6 +6,24 @@ body {
     min-height: 100vh;
 }
 
+div#selections-display {
+    display: flex;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+div#computer-panel {
+    background-color: dodgerblue;
+    width: 50%;
+    height: 50vh;
+}
+
+div#user-panel {
+    background-color: aqua;
+    width: 50%;
+    height: 50vh;
+}
+
 div#user-choices {
     display: flex;
     flex-wrap: wrap;
@@ -52,6 +70,17 @@ a:visited {
 a:hover,
 a:active {
     text-decoration: underline;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(150, 150, 150, 0.5);
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 /* Media Query: Large smartphone (vertical) */

@@ -1,16 +1,19 @@
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('result');
-
+const userWins = document.getElementById('user-wins');
+const computerWins = document.getElementById('computer-wins');
 const possibleChoices = document.querySelectorAll('input');
 
 let userChoice;
 let computerChoice;
 let result;
+let userTotal = 0;
+let computerTotal = 0;
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (event) => {
     userChoice = event.target.id
-    userChoiceDisplay.innerHTML = userChoice
+    userChoiceDisplay.innerHTML = `<img src='${userChoice}.png' alt='${userChoice}'/>`
     generateComputerChoice()
     getResult()
 }));
@@ -27,7 +30,7 @@ function generateComputerChoice() {
         computerChoice = "scissors"
     }
 
-    computerChoiceDisplay.innerHTML = computerChoice
+    computerChoiceDisplay.innerHTML = `<img src='${computerChoice}.png' alt='${computerChoice}'/>`
 };
 
 function getResult() {
@@ -35,17 +38,25 @@ function getResult() {
         result = "It's a draw!"
     } else if (computerChoice === "rock" && userChoice === "paper") {
         result = "You win!"
+        userTotal++
     } else if (computerChoice === "rock" && userChoice === "scissors") {
         result = "You lose!"
+        computerTotal++
     } else if (computerChoice === "paper" && userChoice === "rock") {
         result = "You lose!"
+        computerTotal++
     } else if (computerChoice === "paper" && userChoice === "scissors") {
         result = "You win!"
+        userTotal++
     } else if (computerChoice === "scissors" && userChoice === "rock") {
         result = "You win!"
+        userTotal++
     } else if (computerChoice === "scissors" && userChoice === "paper") {
         result = "You lose!"
+        computerTotal++
     }
 
     resultDisplay.innerHTML = result
+    userWins.innerHTML = userTotal
+    computerWins.innerHTML = computerTotal
 };
